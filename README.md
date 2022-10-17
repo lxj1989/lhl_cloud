@@ -120,3 +120,27 @@ curl -X POST -H 'content-type: application/json' -d '{"action": "inc"}' https://
 ## License
 
 [MIT](./LICENSE)
+
+
+```
+//2. 添加远程仓库
+git remote add github https://github.com/lxj1989/qk-ui.git
+git remote add gitee https://gitee.com/lxj1989/qk-ui.git
+
+//3. 使用git remote -v查看所有远程分支，配置成功会出现：
+
+//4. 分别拉取GitHub 和gitee上的远程分支
+git pull github master
+git pull gitee master --allow-unrelated-histories
+
+//5. 本地仓库关联远程仓库，这里我关联的是github远程仓库，gitee仓库保持同步就行了
+git branch --set-upstream-to=github/master master.
+
+
+git fetch --all				//同步所有分支
+git pull --all				//拉取所有远程分支
+
+以后提交代码时，可以使用
+git push origin master向github 提交代码，
+也可以使用git push gitee master 向gitee提交
+```
