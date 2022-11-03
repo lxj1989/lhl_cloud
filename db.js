@@ -57,7 +57,7 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
 	//时间上的统一
 	timezone: "+08:00",
 	//默认输出执行sql语句
-	logging: true, //console.log,
+	logging: false, //console.log,
 	// logging: function (str) {
 	// 	console.log(str)
 	// }
