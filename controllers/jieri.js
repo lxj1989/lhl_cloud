@@ -1,40 +1,81 @@
 // const rp = require('request-promise')
 // const axios = require('axios')
+const lhl_DBBASE = require('../models/lhl_jieri')
+const lhl_DBBASE1 = require('../models/lhl_jiejia')
+const lhl_DBBASE2 = require('../models/lhl_jieri_detail')
+const {
+	Op
+} = require("sequelize");
 module.exports = function(router) {
-	router.post('/liu/fanyi', async (ctx) => { // 首页
-		// console.log(ctx.request.body)
-		// const clientId = 'R2K4mdcgdmG0okoznyXZSiYu'
-		// const clientSecret = 'aXts0latpO9G0nIFfzOjHbNLeFXujknG'
-		// let _wxUrl = `https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`
-		// let result = await rp(_wxUrl)
-		// let _result = JSON.parse(result)
-		// let access_token = _result.access_token;
+	router.get('/jieri/query', async (ctx) => { // 首页
 
-		//    var {q,from ,to,termIds=""} = ctx.request.body
-
-		// var data = {
-		// 	q,
-		// 	from,
-		// 	to,
-		// 	termIds
-		// }
-		// let _wxUrl1 = `https://aip.baidubce.com/rpc/2.0/mt/texttrans-with-dict/v1?access_token=${access_token}`
-		// let options = {
-		// 	url: _wxUrl1,
-		// 	method: 'POST',
-		//  //  headers:{ //需要啥传啥 我列了几个常用的，不需要删除即可
-		// 	// "content-type": "application/json", //编码类型 不同的content-type传递方式不相同 下面传参时会介绍
-		//  // },
-		// 	data: data,
-		// };
-
-		// let result1 = await axios(options)
+		var {
+			show
+		} = ctx.query;
+		console.log(show)
+		var page = 1;
+		var limit = 1000;
+		let res = await lhl_DBBASE.findAll({
+			limit: limit,
+			attributes: {
+				//排除之前没有字段
+				exclude: ['id', 'createdAt', 'updatedAt', 'version']
+			},
+			offset: (Number(page) - 1) * limit,
+			where: {
+				show
+			},
+		})
 
 		ctx.response.body = {
-			code: 1,
-			data: 2
+			code: 200,
+			data: res
 		}
 	})
+	router.get('/jiejia/query', async (ctx) => { // 首页
+
+		var year = new Date().getFullYear();
+		var page = 1;
+		var limit = 1000;
+		let res = await lhl_DBBASE1.findAll({
+			limit: limit,
+			attributes: {
+				//排除之前没有字段
+				exclude: ['id', 'createdAt', 'updatedAt', 'version']
+			},
+			offset: (Number(page) - 1) * limit,
+			where: {
+				date: {
+					[Op.like]: `%${year}%`
+				}
+			},
+		})
+
+		ctx.response.body = {
+			code: 200,
+			data: res
+		}
+	})
+	router.get('/jieri/queryInfo', async (ctx) => {
+		var {
+			pid
+		} = ctx.query;
+		let res = await lhl_DBBASE2.findOne({
+			attributes: {
+				//排除之前没有字段
+				exclude: ['id', 'createdAt', 'updatedAt', 'version']
+			},
+			where: {
+				pid
+			},
+		})
+		ctx.response.body = {
+			code: 200,
+			data: res
+		}
+	})
+
+
 	return router;
 }
 
