@@ -4,6 +4,7 @@ const logger = require("koa-logger");
 const bodyParser = require("koa-bodyparser");
 const fs = require("fs");
 const path = require("path");
+const app = new Koa();
 // const {
 // 	init: initDB,
 // 	Counter
@@ -19,37 +20,6 @@ router.get("/", async (ctx) => {
 	ctx.body = homePage;
 });
 
-// 更新计数
-// router.post("/api/count", async (ctx) => {
-// 	const {
-// 		request
-// 	} = ctx;
-// 	const {
-// 		action
-// 	} = request.body;
-// 	if (action === "inc") {
-// 		await Counter.create();
-// 	} else if (action === "clear") {
-// 		await Counter.destroy({
-// 			truncate: true,
-// 		});
-// 	}
-
-// 	ctx.body = {
-// 		code: 0,
-// 		data: await Counter.count(),
-// 	};
-// });
-
-// 获取计数
-// router.get("/api/count", async (ctx) => {
-// 	const result = await Counter.count();
-
-// 	ctx.body = {
-// 		code: 0,
-// 		data: result,
-// 	};
-// });
 
 // 小程序调用，获取微信 Open ID
 router.get("/api/wx_openid", async (ctx) => {
@@ -57,14 +27,19 @@ router.get("/api/wx_openid", async (ctx) => {
 		ctx.body = ctx.request.headers["x-wx-openid"];
 	}
 });
+//加载所有路由
+controller(router);
 
-const app = new Koa();
+//总路由装载所有子路由
+let router1 = new Router();
+router1.use('/lhl', router.routes(), router.allowedMethods());
+
 app
 	.use(logger())
 	.use(bodyParser())
-	.use(router.routes())
-	.use(router.allowedMethods())
-	.use(controller(router));
+	.use(router1.routes())
+	.use(router1.allowedMethods())
+
 const port = process.env.PORT || 3301;
 async function bootstrap() {
 	// await initDB();

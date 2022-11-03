@@ -1,18 +1,3 @@
-# wxcloudrun-koa
-
-[![GitHub license](https://img.shields.io/github/license/WeixinCloud/wxcloudrun-koa)](https://github.com/WeixinCloud/wxcloudrun-koa)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/WeixinCloud/wxcloudrun-koa/koa)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/WeixinCloud/wxcloudrun-koa/sequelize)
-
-微信云托管 Node.js Koa 框架模版，实现简单的计数器读写接口，使用云托管 MySQL 读写、记录计数值。
-
-![](https://qcloudimg.tencent-cloud.cn/raw/be22992d297d1b9a1a5365e606276781.png)
-
-## 快速开始
-前往 [微信云托管快速开始页面](https://cloud.weixin.qq.com/cloudrun/onekey)，选择相应语言的模板，根据引导完成部署。
-
-## 本地调试
-下载代码在本地调试，请参考[微信云托管本地调试指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/)
 
 ## 实时开发
 代码变动时，不需要重新构建和启动容器，即可查看变动后的效果。请参考[微信云托管实时开发指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/dev.html)
