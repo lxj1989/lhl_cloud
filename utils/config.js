@@ -28,6 +28,9 @@ var HfBase = [
 
 var HfKey = 'd36dc172483c409b853df3be9a5bb97c'
 
+var APPID = "wx8795d31960e8098c"
+var secret = "5879002292331b5959bdc8d7f630d701"
+
 
 exports.juheDomain = juheDomain;
 exports.juheKey = juheKey;
@@ -38,3 +41,6 @@ exports.tianKey = tianKey;
 
 exports.HfBase = HfBase;
 exports.HfKey = HfKey;
+
+exports.APPID = APPID;
+exports.secret = secret;

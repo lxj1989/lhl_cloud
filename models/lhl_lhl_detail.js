@@ -24,5 +24,7 @@ module.exports = db.defineModel('lhl_lhl_detail', {
 	wuxingjiazi: db.STRING(),
 	wuxingnamonth: db.STRING(),
 	wuxingnayear: db.STRING(),
+	fitness: db.STRING(),
+
 	xingsu: db.STRING()
 })

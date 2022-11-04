@@ -38,6 +38,7 @@ module.exports = function(router) {
 				key: config.tianKey[0]
 			}
 			var res1 = await intf.get_interface(config.tianUrl[0] + 'lunar/index', data1)
+			// console.log('res1--', res1)
 			if (res1.code == 200) {
 				// console.log('res1--', res1)
 				var data = res1.newslist[0]
