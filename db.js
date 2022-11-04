@@ -7,6 +7,16 @@ function generateId() {
 	return uuid.v1()
 }
 
+function generateId3() {
+	return uuid.v3()
+}
+
+function generateId4() {
+	return uuid.v4()
+}
+
+
+
 function serverDate() {
 	let time = new Date().toISOString();
 	return time;
@@ -58,6 +68,7 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
 	timezone: "+08:00",
 	//默认输出执行sql语句
 	logging: false, //console.log,
+	// logging: console.log // 显示所有日志函数调用参数
 	// logging: function (str) {
 	// 	console.log(str)
 	// }
@@ -171,6 +182,9 @@ for (let type of TYPES) {
 
 exp.ID = ID_TYPE
 exp.generateId = generateId
+exp.generateId3 = generateId3
+exp.generateId4 = generateId4
+
 exp.serverDate = serverDate
 exp.sequelize = sequelize
 

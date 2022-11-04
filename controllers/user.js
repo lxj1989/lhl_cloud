@@ -14,36 +14,38 @@ module.exports = function(router) {
 		var sdata = {
 			openid
 		}
-		let res2 = await lhl_DBBASE.findAll({
+		let res2 = await lhl_DBBASE.findOne({
 			attributes: {
 				//排除之前没有字段
 				exclude: ['id', 'createdAt', 'updatedAt', 'version']
 			},
-			limit: 100,
-			// offset: (Number(page) - 1) * limit,
-			where: sdata,
+			where: sdata
 		})
-		if (res2.length > 0) {
+		if (res2) {
 			ctx.response.body = {
 				code: 200,
 				list: res2
 			}
 		} else {
-			const id = db.generateId()
 
 			userInfo.openid = openid;
-			userInfo._id = id;
-			userInfo.userid = db.generateId();
+			userInfo._id = db.generateId4();
+			userInfo.userid = db.generateId4();
 			userInfo.time = db.serverDate();
-			// userInfo.id = '';
-			// userInfo.createdAt = '';
-			// userInfo.updatedAt = '';
-			// userInfo.version = '';
-			const newUser = await lhl_DBBASE.create(userInfo)
-			ctx.response.body = {
-				code: 200,
-				data: newUser
-			}
+			userInfo.id = db.generateId4();
+
+			lhl_DBBASE.create(userInfo).then(res => {
+				ctx.response.body = {
+					code: 200,
+					data: res
+				}
+			}).catch(err => {
+				ctx.response.body = {
+					code: 200,
+					data: err
+				}
+			})
+
 		}
 
 	})

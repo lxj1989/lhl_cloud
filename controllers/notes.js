@@ -126,7 +126,6 @@ module.exports = function(router) {
 				list: '请先登录'
 			}
 		}
-		console.log('_id--------', _id)
 		// 删除所有名为 "Jane" 的人 
 		var res = await lhl_DBBASE.destroy({
 			where: {
