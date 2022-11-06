@@ -5,6 +5,7 @@ module.exports = db.defineModel('lhl_xingzuo', {
 	date: db.STRING(),
 	types: db.STRING(),
 	addTime: db.STRING(),
+	consName: db.STRING(),
 	content: {
 		type: db.TEXT(),
 		allowNull: true

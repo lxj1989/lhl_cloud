@@ -24,7 +24,7 @@ module.exports = function(router) {
 		if (res2) {
 			ctx.response.body = {
 				code: 200,
-				list: res2
+				data: res2
 			}
 		} else {
 

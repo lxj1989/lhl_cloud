@@ -27,7 +27,8 @@ module.exports = function(router) {
 			where: {
 				// date: nowDate,
 				addTime: nowDate,
-				types: type
+				types: type,
+				consName: consName
 			},
 		})
 
@@ -49,7 +50,8 @@ module.exports = function(router) {
 			if (_result.error_code == 0) {
 				// console.log('res1--', res1)
 				var data = {
-					content: res1
+					content: res1,
+					consName: consName
 				}
 				const id = db.generateId()
 				data._id = id;
