@@ -10,6 +10,8 @@ const app = new Koa();
 // 	Counter
 // } = require("./db");
 const controller = require('./controller')
+const schedule = require('./schedule/index')
+schedule()
 
 const router = new Router();
 

@@ -31,14 +31,11 @@ service.interceptors.response.use(
 		/**
 		 * code为非0是抛错 可结合自己业务进行修改
 		 */
-
-		if (res.code === 200) {
+		if (res.code == 200) {
 			return Promise.resolve(res);
 
 		} else if (res.code === 401) {} else if (res.code !== 0) {
 			return Promise.reject('error')
-		} else {
-
 		}
 	},
 	error => {

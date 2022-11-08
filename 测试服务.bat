@@ -1,1 +1,1 @@
-supervisor app
+supervisor index

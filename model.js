@@ -11,7 +11,7 @@ module.exports = {}
 for (let f of jsFiles) {
 	let name = f.substring(0, f.length - 3)
 	// module.exports[name] = require(path.join(__dirname, '/models/', f))
-	module.exports['lhl_feedback'] = require(path.join(__dirname, '/models/', 'lhl_feedback.js'))
+	module.exports['lhl_xingzuo'] = require(path.join(__dirname, '/models/', 'lhl_xingzuo.js'))
 
 }
 

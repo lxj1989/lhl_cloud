@@ -1,24 +1,28 @@
 // const rp = require('request-promise')
 // const axios = require('axios')
-const lhl_DBBASE = require('../models/lhl_xingzuo')
+const lhl_DBBASE = require('../models/lhl_weather')
 
-const rp = require('request-promise')
 var config = require("../utils/config");
 var intf = require("../utils/interface");
 const db = require('../db')
+// const request = require('request')
+// const Sequelize = require('sequelize')
+
+// const {
+// 	Op
+// } = require("sequelize");
 module.exports = function(router) {
-	//星座
-	router.get('/index/xingzuo', async (ctx) => {
+	//老黄历页面
+	router.get('/index/weather/day', async (ctx) => {
 		var {
-			consName,
-			type
+			city
 		} = ctx.query;
+
 		const date = new Date()
 		const Y = date.getFullYear() // 年
 		const M = (date.getMonth() + 1).toString().padStart(2, '0');
 		const D = date.getDate().toString().padStart(2, '0');
 		var nowDate = `${Y}${M}${D}`
-
 		//查询数据库是否存在
 		let res = await lhl_DBBASE.findOne({
 			attributes: {
@@ -27,52 +31,48 @@ module.exports = function(router) {
 			},
 			where: {
 				// date: nowDate,
-				addTime: nowDate,
-				types: type,
-				consName: consName
+				date: nowDate,
+				city: city
 			},
 		})
+
 		// 如果存在,直接返回
 		if (res) {
 			ctx.response.body = {
 				code: 200,
-				data: res
+				now: JSON.parse(res.content)
 			}
 		} else {
 			//不存在就请求api，再存入数据库返回
 
+			// var url =
+			// 	`${config.juheUrl[1]}constellation/getAll?consName=${encodeURI(consName)}&type=${type}&key=${config.juheKey[2]}`;
 			var url =
-				`${config.juheUrl[1]}constellation/getAll?consName=${encodeURI(consName)}&type=${type}&key=${config.juheKey[2]}`;
-			let res1 = await rp(url)
-			let _result = JSON.parse(res1)
+				`https://geoapi.qweather.com/v2/city/lookup?location=${encodeURI(city)}&key=${config.HfKey}`
 
-
-			if (_result.error_code == 0) {
-				// console.log('res1--', res1)
+			let res1 = await intf.get_interface(url, {})
+			if (res1.code == 200) {
+				var url1 =
+					`https://devapi.qweather.com/v7/weather/now?location=${res1.location[0].id}&key=${config.HfKey}`
+				let res2 = await intf.get_interface(url1, {})
 				var data = {
-					content: res1,
-					consName: consName
+					city: city,
+					content: JSON.stringify(res2.now)
 				}
-				const id = db.generateId()
-				data._id = id;
+				data._id = db.generateId();
 				data.id = db.generateId();
-				data.addTime = nowDate;
-				data.types = type;
-				data.date = _result.date;
+				data.date = nowDate;
 
 
-				const res3 = await lhl_DBBASE.create(data)
+				await lhl_DBBASE.create(data)
 				ctx.response.body = {
 					code: 200,
-					data: res3
+					now: res2.now
 				}
 			}
+
 		}
 	})
-
-
-
-
 
 	return router;
 }
