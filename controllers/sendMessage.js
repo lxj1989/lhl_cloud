@@ -6,7 +6,7 @@ const config = require('../utils/config')
 
 module.exports = function(router) {
 
-	router.get('/user/getopenid', async (ctx) => {
+	router.get('/user/getopenid1', async (ctx) => {
 		var url =
 			`https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${config.APPID}&secret=${config.secret}`
 		let res2 = await rp(url)

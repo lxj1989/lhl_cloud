@@ -91,7 +91,7 @@ module.exports = function(router) {
 						source: 1 //1签到
 					}
 					await lhl_DBBASE1.create(d1)
-					console.log('1---------------')
+					// console.log('1---------------')
 					var d2 = {
 						openid,
 						integral,
