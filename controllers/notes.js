@@ -54,10 +54,11 @@ module.exports = function(router) {
 
 			data.openid = openid;
 			data._id = id;
-
-			// userInfo.userid = db.generateId();
 			data.time = db.serverDate();
 			data.id = db.generateId();
+			if (!data.guanxi) {
+				data.guanxi = 0
+			}
 			// userInfo.createdAt = '';
 			// userInfo.updatedAt = '';
 			// userInfo.version = '';

@@ -1,4 +1,6 @@
 const lhl_DBBASE = require('../models/lhl_user_setting')
+const lhl_setting = require('../models/lhl_setting')
+
 const db = require('../db')
 module.exports = function(router) {
 	router.post('/user/setting/add', async (ctx) => {
@@ -52,9 +54,20 @@ module.exports = function(router) {
 				openid
 			},
 		})
+		let res3 = await lhl_setting.findOne({
+			attributes: {
+				//排除之前没有字段
+				exclude: ['id', 'createdAt', 'updatedAt', 'version']
+			}
+		})
+		// console.log({
+		// 	...res2.dataValues,
+		// 	...res3.dataValues
+		// })
 		return ctx.response.body = {
 			code: 200,
 			data: res2,
+			peizhi: res3
 		}
 
 	})
