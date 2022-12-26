@@ -74,9 +74,7 @@ module.exports = function(router) {
 			// ctx.response.body = {
 			// 	code: 200,
 			// }
-			ctx.rest({
-				data: data
-			})
+			ctx.rest(data)
 		} else {
 
 			let res = await lhl_DBBASE.findOne({
