@@ -1,9 +1,9 @@
 // const log4js = require('./logs.js')
-const {
-	logger,
-	accessLogger,
-	getLogger
-} = require('./logs');
+// const {
+// 	logger,
+// 	accessLogger,
+// 	getLogger
+// } = require('./logs');
 // const loggers = logger.getLogger();
 module.exports = {
 	APIError: function(code, message) {
@@ -31,7 +31,7 @@ module.exports = {
 				try {
 					await next()
 				} catch (e) {
-					logger.error(e);
+					// logger.error(e);
 					ctx.response.status = 200
 					ctx.response.type = 'application/json'
 					ctx.response.body = {
