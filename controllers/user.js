@@ -75,8 +75,44 @@ module.exports = function(router) {
 		// }
 
 	})
+	router.post('/user/list', async (ctx) => { // 首页
+		var {
+			title,
+			page = 1,
+			limit = 10
+		} = ctx.request.body;
+		// var openid = ctx.request.headers["x-wx-openid"];
+		// var limit = 1000;
+		// var page = 1;
+		var sdata = {}
+		if (title) sdata.nickName = {
+			[Op.like]: '%' + title + '%'
+		}
+		// departments: {
+		// 	[Op.like]: `%${depInfo.id}%`
+		// }
+		let {
+			count,
+			rows
+		} = await lhl_DBBASE.findAndCountAll({
+			attributes: {
+				//排除之前没有字段
+				exclude: ['id', 'createdAt', 'updatedAt', 'version']
+			},
+			limit: limit,
+			offset: (Number(page) - 1) * limit,
+			where: sdata,
+		})
+		// ctx.response.body = {
+		// 	code: 200,
+		// 	list: res2
+		// }
+		ctx.rest({
+			list: rows,
+			total: count
+		})
+	})
 	router.get('/user/getopenid', async (ctx) => {
-		console.log(ctx.query)
 		var {
 			code
 		} = ctx.query;

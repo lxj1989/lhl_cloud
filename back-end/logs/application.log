@@ -1,0 +1,395 @@
+[2022-12-20T12:52:00.781] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: lhl_jieri._id cannot be null,
+notNull Violation: lhl_jieri.name cannot be null,
+notNull Violation: lhl_jieri.show cannot be null,
+notNull Violation: lhl_jieri.type cannot be null
+    at InstanceValidator._validate (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async InstanceValidator._validateAndRunHooks (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:2368:7)
+    at async Function.create (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1344:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\jieri.js:140:11
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+    at async cors (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:9) {
+  errors: [
+    ValidationErrorItem {
+      message: 'lhl_jieri._id cannot be null',
+      type: 'notNull Violation',
+      path: '_id',
+      value: null,
+      origin: 'CORE',
+      instance: [lhl_jieri],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'lhl_jieri.name cannot be null',
+      type: 'notNull Violation',
+      path: 'name',
+      value: null,
+      origin: 'CORE',
+      instance: [lhl_jieri],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'lhl_jieri.show cannot be null',
+      type: 'notNull Violation',
+      path: 'show',
+      value: null,
+      origin: 'CORE',
+      instance: [lhl_jieri],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'lhl_jieri.type cannot be null',
+      type: 'notNull Violation',
+      path: 'type',
+      value: null,
+      origin: 'CORE',
+      instance: [lhl_jieri],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ]
+}
+[2022-12-20T12:53:21.561] [ERROR] application - ReferenceError: db is not defined
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\jieri.js:140:15
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+    at async cors (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:9)
+[2022-12-20T12:54:19.290] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: lhl_jieri.name cannot be null,
+notNull Violation: lhl_jieri.show cannot be null,
+notNull Violation: lhl_jieri.type cannot be null
+    at InstanceValidator._validate (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async InstanceValidator._validateAndRunHooks (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:2368:7)
+    at async Function.create (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1344:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\jieri.js:142:11
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+    at async cors (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:9) {
+  errors: [
+    ValidationErrorItem {
+      message: 'lhl_jieri.name cannot be null',
+      type: 'notNull Violation',
+      path: 'name',
+      value: null,
+      origin: 'CORE',
+      instance: [lhl_jieri],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'lhl_jieri.show cannot be null',
+      type: 'notNull Violation',
+      path: 'show',
+      value: null,
+      origin: 'CORE',
+      instance: [lhl_jieri],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'lhl_jieri.type cannot be null',
+      type: 'notNull Violation',
+      path: 'type',
+      value: null,
+      origin: 'CORE',
+      instance: [lhl_jieri],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ]
+}
+[2022-12-20T12:56:24.108] [ERROR] application - Error
+    at Query.run (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async MySQLQueryInterface.insert (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:2432:35)
+    at async Function.create (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1344:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\jieri.js:142:11
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+    at async cors (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:9) {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Incorrect integer value: 'a72b9c90-8022-11ed-ab7a-4942e47bac10' for column 'id' at row 1
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Execute.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+    errno: 1366,
+    sqlState: 'HY000',
+    sqlMessage: "Incorrect integer value: 'a72b9c90-8022-11ed-ab7a-4942e47bac10' for column 'id' at row 1",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      'a72b9c90-8022-11ed-ab7a-4942e47bac10',
+      'a71c0c30-8022-11ed-ab7a-4942e47bac10',
+      '2022-12-02',
+      1
+    ]
+  },
+  original: Error: Incorrect integer value: 'a72b9c90-8022-11ed-ab7a-4942e47bac10' for column 'id' at row 1
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Execute.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+    errno: 1366,
+    sqlState: 'HY000',
+    sqlMessage: "Incorrect integer value: 'a72b9c90-8022-11ed-ab7a-4942e47bac10' for column 'id' at row 1",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      'a72b9c90-8022-11ed-ab7a-4942e47bac10',
+      'a71c0c30-8022-11ed-ab7a-4942e47bac10',
+      '2022-12-02',
+      1
+    ]
+  },
+  sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+  parameters: [
+    'a72b9c90-8022-11ed-ab7a-4942e47bac10',
+    'a71c0c30-8022-11ed-ab7a-4942e47bac10',
+    '2022-12-02',
+    1
+  ]
+}
+[2022-12-20T12:58:08.108] [ERROR] application - Error
+    at Query.run (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async MySQLQueryInterface.insert (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:2432:35)
+    at async Function.create (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1344:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\jieri.js:142:11
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+    at async cors (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:9) {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'id' in 'field list'
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Prepare.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'id' in 'field list'",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      'e532f9c0-8022-11ed-ab7a-4942e47bac10',
+      'e52ba6c0-8022-11ed-ab7a-4942e47bac10',
+      '2022-12-01',
+      1
+    ]
+  },
+  original: Error: Unknown column 'id' in 'field list'
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Prepare.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'id' in 'field list'",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      'e532f9c0-8022-11ed-ab7a-4942e47bac10',
+      'e52ba6c0-8022-11ed-ab7a-4942e47bac10',
+      '2022-12-01',
+      1
+    ]
+  },
+  sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+  parameters: [
+    'e532f9c0-8022-11ed-ab7a-4942e47bac10',
+    'e52ba6c0-8022-11ed-ab7a-4942e47bac10',
+    '2022-12-01',
+    1
+  ]
+}
+[2022-12-20T12:58:56.038] [ERROR] application - Error
+    at Query.run (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async MySQLQueryInterface.insert (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:2432:35)
+    at async Function.create (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1344:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\jieri.js:142:11
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+    at async cors (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:9) {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'id' in 'field list'
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Prepare.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'id' in 'field list'",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      '01c5e2f0-8023-11ed-ab7a-4942e47bac10',
+      '01c14f10-8023-11ed-ab7a-4942e47bac10',
+      '2022-12-07',
+      1
+    ]
+  },
+  original: Error: Unknown column 'id' in 'field list'
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Prepare.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'id' in 'field list'",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      '01c5e2f0-8023-11ed-ab7a-4942e47bac10',
+      '01c14f10-8023-11ed-ab7a-4942e47bac10',
+      '2022-12-07',
+      1
+    ]
+  },
+  sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+  parameters: [
+    '01c5e2f0-8023-11ed-ab7a-4942e47bac10',
+    '01c14f10-8023-11ed-ab7a-4942e47bac10',
+    '2022-12-07',
+    1
+  ]
+}
+[2022-12-20T12:59:38.515] [ERROR] application - Error
+    at Query.run (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async MySQLQueryInterface.insert (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:2432:35)
+    at async Function.create (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1344:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\jieri.js:143:11
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+    at async cors (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:9) {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'id' in 'field list'
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Prepare.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'id' in 'field list'",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      '1b0b00b0-8023-11ed-83be-fd7b66ff1246',
+      '1b0ad9a0-8023-11ed-83be-fd7b66ff1246',
+      '2022-12-01',
+      1
+    ]
+  },
+  original: Error: Unknown column 'id' in 'field list'
+      at Packet.asError (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Prepare.execute (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+      at readableAddChunk (node:internal/streams/readable:289:9)
+      at Socket.Readable.push (node:internal/streams/readable:228:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:199:23) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'id' in 'field list'",
+    sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+    parameters: [
+      '1b0b00b0-8023-11ed-83be-fd7b66ff1246',
+      '1b0ad9a0-8023-11ed-83be-fd7b66ff1246',
+      '2022-12-01',
+      1
+    ]
+  },
+  sql: 'INSERT INTO `lhl_jiejia` (`id`,`_id`,`date`,`status`) VALUES (?,?,?,?);',
+  parameters: [
+    '1b0b00b0-8023-11ed-83be-fd7b66ff1246',
+    '1b0ad9a0-8023-11ed-83be-fd7b66ff1246',
+    '2022-12-01',
+    1
+  ]
+}

@@ -1,0 +1,557 @@
+[2022-12-07T10:06:00.770] [ERROR] application - Error: WHERE parameter "openid" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+    at MySQLQueryGenerator.selectQuery (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+    at MySQLQueryInterface.select (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+    at Function.findAll (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1134:47)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Function.findOne (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1228:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\integral.js:34:13
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+[2022-12-07T11:14:36.516] [ERROR] application - Error: WHERE parameter "type" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+    at MySQLQueryGenerator.selectQuery (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+    at MySQLQueryInterface.select (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+    at Function.findAll (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1134:47)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Function.findOne (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\sequelize\lib\model.js:1228:12)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\weather.js:121:13
+    at async bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+[2022-12-07T11:26:45.432] [ERROR] application - ReferenceError: city is not defined
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\weather.js:221:11
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:42:32)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:42:32)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:34:12
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+[2022-12-07T11:27:21.000] [ERROR] application - ReferenceError: city is not defined
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\controllers\weather.js:221:11
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:42:32)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:42:32)
+    at D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:34:12
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async logger (D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\node_modules\koa-logger\index.js:67:7)
+    at async D:\quicker\2021-12\laohuangli-cloud\lhl_cloud\utils\rest.js:32:6
+[2022-12-07T11:27:35.822] [ERROR] application - [AxiosError: Request failed with status code 404] {
+  message: 'Request failed with status code 404',
+  name: 'AxiosError',
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [Function: httpAdapter],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 20000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function] },
+    validateStatus: [Function: validateStatus],
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json;charset=UTF-8',
+      'User-Agent': 'axios/0.27.2'
+    },
+    url: 'https://devapi.qweather.com/v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c',
+    method: 'get',
+    params: {},
+    data: undefined
+  },
+  request: ClientRequest {
+    _events: [Object: null prototype] {
+      socket: [Function],
+      abort: [Function],
+      aborted: [Function],
+      connect: [Function],
+      error: [Function],
+      timeout: [Function],
+      prefinish: [Function: requestOnPrefinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    socket: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      _SNICallback: null,
+      servername: 'devapi.qweather.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 10,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'devapi.qweather.com',
+      _readableState: [ReadableState],
+      readable: true,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      parser: null,
+      _httpMessage: [Circular],
+      timeout: 20000,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(asyncId)]: 126,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 20000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 12015,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(asyncId)]: 134,
+        [Symbol(triggerId)]: 129
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    connection: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      _SNICallback: null,
+      servername: 'devapi.qweather.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 10,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'devapi.qweather.com',
+      _readableState: [ReadableState],
+      readable: true,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      parser: null,
+      _httpMessage: [Circular],
+      timeout: 20000,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(asyncId)]: 126,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 20000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 12015,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(asyncId)]: 134,
+        [Symbol(triggerId)]: 129
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    _header: 'GET /v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json;charset=UTF-8\r\n' +
+      'User-Agent: axios/0.27.2\r\n' +
+      'Host: devapi.qweather.com\r\n' +
+      'Connection: close\r\n' +
+      '\r\n',
+    _onPendingData: [Function: noopPendingOutput],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object],
+      requests: {},
+      sockets: [Object],
+      freeSockets: {},
+      keepAliveMsecs: 1000,
+      keepAlive: false,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    insecureHTTPParser: undefined,
+    path: '/v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c',
+    _ended: true,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      readable: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      headers: [Object],
+      rawHeaders: [Array],
+      trailers: {},
+      rawTrailers: [],
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: '',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular],
+      responseUrl: 'https://devapi.qweather.com/v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c',
+      redirects: [],
+      [Symbol(kCapture)]: false
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    _redirectable: Writable {
+      _writableState: [WritableState],
+      writable: true,
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _onNativeResponse: [Function],
+      _currentRequest: [Circular],
+      _currentUrl: 'https://devapi.qweather.com/v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c',
+      _timeout: null,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(kCapture)]: false,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      host: [Array]
+    }
+  },
+  response: {
+    status: 404,
+    statusText: '',
+    headers: {
+      date: 'Wed, 07 Dec 2022 03:27:20 GMT',
+      'content-type': 'text/plain;charset=UTF-8',
+      'content-length': '0',
+      connection: 'close',
+      'access-control-allow-origin': '*',
+      'access-control-allow-methods': '*',
+      'access-control-allow-headers': 'Content-Type,X-Requested-With'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Function: httpAdapter],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 20000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object],
+      url: 'https://devapi.qweather.com/v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c',
+      method: 'get',
+      params: {},
+      data: undefined
+    },
+    request: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json;charset=UTF-8\r\n' +
+        'User-Agent: axios/0.27.2\r\n' +
+        'Host: devapi.qweather.com\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      insecureHTTPParser: undefined,
+      path: '/v7/weather/zhishu?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      _redirectable: [Writable],
+      [Symbol(kCapture)]: false,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    data: ''
+  }
+}
+[2022-12-07T11:29:20.972] [ERROR] application - error
+[2022-12-07T12:01:35.531] [ERROR] application - [AxiosError: timeout of 20000ms exceeded] {
+  message: 'timeout of 20000ms exceeded',
+  name: 'AxiosError',
+  code: 'ECONNABORTED',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [Function: httpAdapter],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 20000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function] },
+    validateStatus: [Function: validateStatus],
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json;charset=UTF-8',
+      'User-Agent': 'axios/0.27.2'
+    },
+    url: 'https://devapi.qweather.com/v7/indices/1d?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c&type=0',
+    method: 'get',
+    params: {},
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError],
+      socket: [Array]
+    },
+    _eventsCount: 3,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/v7/indices/1d?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c&type=0',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'devapi.qweather.com',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/v7/indices/1d',
+      search: '?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c&type=0'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /v7/indices/1d?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c&type=0 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json;charset=UTF-8\r\n' +
+        'User-Agent: axios/0.27.2\r\n' +
+        'Host: devapi.qweather.com\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      insecureHTTPParser: undefined,
+      path: '/v7/indices/1d?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c&type=0',
+      _ended: false,
+      res: null,
+      aborted: true,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: [HTTPParser],
+      maxHeadersCount: null,
+      reusedSocket: false,
+      _redirectable: [Circular],
+      [Symbol(kCapture)]: false,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://devapi.qweather.com/v7/indices/1d?location=114.27,30.60&key=d36dc172483c409b853df3be9a5bb97c&type=0',
+    _timeout: null,
+    [Symbol(kCapture)]: false
+  }
+}

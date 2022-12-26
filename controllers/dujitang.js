@@ -11,6 +11,29 @@ const {
 } = require("sequelize");
 module.exports = function(router) {
 	//老黄历页面
+	/**
+	 * @api {GET} /index/dujitang 毒鸡汤
+	 * @apiDescription 毒鸡汤
+	 * @apiName 毒鸡汤接口
+	 * @apiGroup HOME
+	 * @apiSuccess {json} result
+	 * @apiSuccessExample {json} Success-Response:
+	 *  {
+	 * 		"code":200,
+	 * 		"data":{
+	 *			"data":{"content":"你是我的小苹果，哎呀讨厌！我是说我TM真想削你。","_id":"5fbaa160-75cf-11ed-9725-fdb25c09e850","id":"5fbaa161-75cf-11ed-9725-fdb25c09e850"}
+	 *		}
+	 *	}
+	 *  @apiSuccessExample {json} Error-Response:
+	 *  {
+	 *      "code" : 1,
+	 *      "msg" : '获取失败'
+	 *  }
+	 * @apiSampleRequest http://localhost:3301/lhl/index/dujitang
+	 * @apiVersion 1.0.0
+	 * 
+	 *
+	 */
 	router.get('/index/dujitang', async (ctx) => {
 		// var {
 		// 	date
@@ -48,10 +71,12 @@ module.exports = function(router) {
 				const res3 = await lhl_DBBASE.create(data)
 			}
 
-			ctx.response.body = {
-				code: 200,
+			// ctx.response.body = {
+			// 	code: 200,
+			// }
+			ctx.rest({
 				data: data
-			}
+			})
 		} else {
 
 			let res = await lhl_DBBASE.findOne({

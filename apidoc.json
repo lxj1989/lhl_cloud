@@ -1,0 +1,15 @@
+{
+	"name": "老黄历-接口文档",
+	"version": "1.0.0",
+	"description": "老黄历-接口文档",
+	"title": "老黄历-接口文档",
+	"url": "http://localhost:3301/lhl/apidoc/index.html",
+	"header": {
+		"title": "接口通用规则",
+		"filename": "../header.md"
+	},
+	"footer": {
+		"title": "API 错误返回值说明",
+		"filename": "../footer.md"
+	}
+}

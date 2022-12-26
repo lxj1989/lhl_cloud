@@ -10,6 +10,54 @@ var intf = require("../utils/interface");
 const db = require('../db')
 module.exports = function(router) {
 	//老黄历页面
+	/**
+	 * @api {GET} /lhl/lhl/day/query 黄历信息
+	 * @apiDescription 黄历信息
+	 * @apiName 黄历信息接口
+	 * @apiGroup HUANGLI
+	 * @apiSuccess {json} result
+	 * @apiSuccessExample {json} Success-Response:
+	 *  {
+	 *		"code":200,
+	 *		"data":{
+	 *			chongsha: "马日冲(戊子)鼠"
+				festival: ""
+				fitness: "日值月破 大事不宜"
+				gregoriandate: "2022-12-07"
+				id: "fb0ed311-75d5-11ed-b60d-b1950a3c59db"
+				jianshen: "破"
+				jieqi: "大雪"
+				lmonthname: "仲冬"
+				lubarmonth: "十一月"
+				lunar_festival: ""
+				lunardate: "2022-11-14"
+				lunarday: "十四"
+				pengzu: "甲不开仓 午不苫盖"
+				shengxiao: "虎"
+				shenwei: "喜神：东北 福神：正北 财神：东北阳贵：西南 阴贵：东北 "
+				suisha: "岁煞北"
+				taboo: "日值月破 大事不宜"
+				taishen: "占在门,碓须忌,厨灶莫相干胎神在房内北停留5天"
+				tiangandizhiday: "甲午"
+				tiangandizhimonth: "壬子"
+				tiangandizhiyear: "壬寅"
+				wuxingjiazi: "金"
+				wuxingnamonth: "桑松木"
+				wuxingnayear: "金箔金"
+				xingsu: "西方参水猿-凶"
+				_id: "fb0ed310-75d5-11ed-b60d-b1950a3c59db"
+	 *		}
+	 *	}
+	 *  @apiSuccessExample {json} Error-Response:
+	 *  {
+	 *      "code" : 1,
+	 *      "msg" : '获取失败'
+	 *  }
+	 * @apiSampleRequest http://localhost:3301/lhl/lhl/day/query?date=2022-12-07
+	 * @apiVersion 1.0.0
+	 * 
+	 *
+	 */
 	router.get('/lhl/day/query', async (ctx) => {
 		var {
 			date

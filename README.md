@@ -52,7 +52,7 @@
 #### 调用示例
 
 ```
-curl https://<云托管服务域名>/api/count
+http://localhost:3301/lhl/apidoc/index.html
 ```
 
 ### `POST /api/count`
@@ -87,11 +87,6 @@ curl https://<云托管服务域名>/api/count
 }
 ```
 
-#### 调用示例
-
-```
-curl -X POST -H 'content-type: application/json' -d '{"action": "inc"}' https://<云托管服务域名>/api/count
-```
 
 ## 使用注意
 如果不是通过微信云托管控制台部署模板代码，而是自行复制/下载模板代码后，手动新建一个服务并部署，需要在「服务设置」中补全以下环境变量，才可正常使用，否则会引发无法连接数据库，进而导致部署失败。

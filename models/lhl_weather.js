@@ -9,5 +9,6 @@ module.exports = db.defineModel('lhl_weather_day', {
 	},
 	date: db.STRING(),
 	city: db.STRING(),
+	type: db.STRING(),
 	content: db.TEXT(),
 })
