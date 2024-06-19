@@ -5,6 +5,9 @@ const logger = require("koa-logger");
 const bodyParser = require("koa-bodyparser");
 const fs = require("fs");
 const path = require("path");
+
+const multer = require('koa-multer');
+
 const app = new Koa();
 //配置 cors 的中间件 
 app.use(
@@ -29,6 +32,31 @@ schedule()
 //前缀
 const router = new Router({
 	prefix: '/lhl'
+});
+
+
+const storage = multer.diskStorage({
+	destination: function(req, file, cb) {
+		cb(null, 'public/uploads/') // 指定上传的目标路径
+	},
+	filename: function(req, file, cb) {
+		console.log(file.originalname)
+		const extname = path.extname(file.originalname);
+		cb(null, file.fieldname + '-' + Date.now() + extname); // 指定文件命名规则
+	}
+});
+const upload = multer({
+	storage: storage,
+
+});
+router.post('/upload', upload.single('uploadfile_ant'), async (ctx) => {
+	// 图片上传成功后的处理逻辑
+	console.log(ctx.req.file.filename)
+	// 可以通过ctx.req.file获取上传的文件信息
+	ctx.body = {
+		code: 200,
+		data: 'public/uploads/' + ctx.req.file.filename
+	}
 });
 
 const homePage = fs.readFileSync(path.join(__dirname, "index.html"), "utf-8");
@@ -93,7 +121,7 @@ app.use(static({
 // 	logger.error(err);
 // });
 
-const port = process.env.PORT || 3301;
+const port = process.env.PORT || 3302;
 async function bootstrap() {
 	// await initDB();
 	app.listen(port, () => {
